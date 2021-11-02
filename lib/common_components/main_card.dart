@@ -29,6 +29,7 @@ class MainCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               FloatingActionButton(
+                elevation: 0,
                   backgroundColor: mainCardModel.status == Status.add
                       ? kWhite
                       : kGreyBackground,

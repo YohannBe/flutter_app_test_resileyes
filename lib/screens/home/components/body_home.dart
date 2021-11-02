@@ -1,19 +1,23 @@
-import 'dart:ui';
+import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_test_resileyes/common_components/doctors_card.dart';
-import 'package:flutter_app_test_resileyes/constants.dart';
 
 import 'package:flutter_app_test_resileyes/model/enum_status.dart';
-import 'package:flutter_app_test_resileyes/model/main_card_model.dart';
-import 'package:flutter_app_test_resileyes/model/symptoms_model.dart';
-import 'package:flutter_app_test_resileyes/screens/home/components/symptoms_list_view.dart';
 
+import 'package:flutter_app_test_resileyes/model/main_card_model.dart';
+
+import 'package:flutter_app_test_resileyes/model/symptoms_model.dart';
+
+import 'package:flutter_app_test_resileyes/screens/home/components/symptoms_list_view.dart';
+import 'package:flutter_app_test_resileyes/screens/home/home_viewmodel.dart';
+
+import 'doctor_grid.dart';
 import 'main_cards_list_view.dart';
 
 class BodyHome extends StatelessWidget {
-  BodyHome({Key? key}) : super(key: key);
+  BodyHome(this.homeViewModel, {Key? key}) : super(key: key);
 
+  final HomeViewModel homeViewModel;
   List<MainCardModel> listMainCard = [
     MainCardModel(
         Status.add, Icons.add, "Make an appointment", "Clinic visit", () {}),
@@ -50,19 +54,7 @@ class BodyHome extends StatelessWidget {
                 Text("What are your symptoms?"),
                 SymptomsListView(listSymptoms: listSymptoms),
                 Text("Popular doctors"),
-                GridView.count(
-                  shrinkWrap: true,
-                  primary: false,
-                  crossAxisCount: 2,
-                  children: [
-                    DoctorCard(),
-                    DoctorCard(),
-                    DoctorCard(),
-                    DoctorCard(),
-                    DoctorCard(),
-                    DoctorCard(),
-                  ],
-                ),
+                GridDoctors(homeViewModel),
               ],
             ),
           ),

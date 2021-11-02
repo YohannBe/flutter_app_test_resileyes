@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_test_resileyes/screens/home/home_viewmodel.dart';
 
 import 'components/body_home.dart';
 
@@ -9,11 +10,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HomeViewModel homeViewModel = HomeViewModel();
     return Scaffold(
       appBar: AppBar(
         title: Text("Alain"),
       ),
-      body: BodyHome(),
+      body: BodyHome(homeViewModel),
     );
   }
 }
