@@ -24,8 +24,8 @@ class BodyHome extends StatelessWidget {
         Status.add, Icons.add, "Make an appointment", "Clinic visit", () {}),
     MainCardModel(Status.defined, Icons.home_outlined, "Call the doctor home",
         "Home visit", () {}),
-    MainCardModel(Status.defined, Icons.home_outlined, "Call the doctor home",
-        "Home visit", () {}),
+    MainCardModel(Status.defined, Icons.local_hospital_outlined, "Call the hospital",
+        "Hospital visit", () {}),
   ];
 
   List<SymptomsModel> listSymptoms = [

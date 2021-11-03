@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_test_resileyes/common_components/loading_widget.dart';
 import 'package:flutter_app_test_resileyes/constants.dart';
-import 'package:flutter_app_test_resileyes/model/members.dart';
 import 'package:flutter_app_test_resileyes/screens/home/home_viewmodel.dart';
 import 'package:flutter_app_test_resileyes/user_viewmodel.dart';
 
