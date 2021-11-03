@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_test_resileyes/routes.dart';
 import 'package:flutter_app_test_resileyes/screens/home/home_screen.dart';
 import 'package:flutter_app_test_resileyes/theme.dart';
+import 'package:flutter_app_test_resileyes/user_viewmodel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,18 +14,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    UserViewModel userViewModel = UserViewModel();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: buildThemeData(),
       //initialRoute: '/',
       //onGenerateRoute: (settings) => RouteGenerator.generateRoute(settings),
-      home: HomeScreen(),
+      home: HomeScreen(userViewModel),
       routes: routes,
     );
   }
 }
 
+/*
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -46,7 +49,7 @@ class RouteGenerator {
             )));
   }
 }
-
+*/
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 

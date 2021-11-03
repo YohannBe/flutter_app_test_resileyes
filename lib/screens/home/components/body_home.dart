@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_test_resileyes/constants.dart';
 
 import 'package:flutter_app_test_resileyes/model/enum_status.dart';
 
@@ -51,9 +52,15 @@ class BodyHome extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MainCardsListView(listMainCard: listMainCard),
-                Text("What are your symptoms?"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: regularPadding),
+                  child: Text("What are your symptoms?", style: Theme.of(context).textTheme.headline6,),
+                ),
                 SymptomsListView(listSymptoms: listSymptoms),
-                Text("Popular doctors"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: regularPadding),
+                  child: Text("Popular doctors", style: Theme.of(context).textTheme.headline6,),
+                ),
                 GridDoctors(homeViewModel),
               ],
             ),

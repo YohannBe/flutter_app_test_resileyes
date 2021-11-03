@@ -25,6 +25,13 @@ AppBarTheme appBarTheme() {
 
 TextTheme buildTextTheme() {
   return const TextTheme(
-      bodyText1: TextStyle(color: kTextColor),
-      bodyText2: TextStyle(color: kTextColor));
+      bodyText1: TextStyle(color: kBlack),
+      caption: TextStyle(color: kTextColor),
+      bodyText2: TextStyle(color: kTextColor),
+      subtitle1: TextStyle(color: kTextColor),
+      subtitle2: TextStyle(color: kTextSubtitleColor),
+      headline3: TextStyle(color: kBlack),
+      headline4: TextStyle(color: kWhite),
+      headline6: TextStyle(color: kBlack)
+  );
 }

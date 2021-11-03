@@ -9,3 +9,6 @@ const kBlack = Color(0xFF000000);
 const kGold = Color(0xFFFDD835);
 
 const kTextColor = Color(0xFF757575);
+const kTextSubtitleColor = Color(0xFFd3d3d3);
+
+const double regularPadding = 10;

@@ -7,10 +7,11 @@ import '../constants.dart';
 class MainCard extends StatelessWidget {
   const MainCard({
     Key? key,
-    required this.mainCardModel,
+    required this.mainCardModel, required this.index,
   }) : super(key: key);
 
   final mainCardModel;
+  final index;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,7 @@ class MainCard extends StatelessWidget {
             children: [
               FloatingActionButton(
                 elevation: 0,
+                  heroTag: index,
                   backgroundColor: mainCardModel.status == Status.add
                       ? kWhite
                       : kGreyBackground,

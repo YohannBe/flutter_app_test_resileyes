@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_test_resileyes/common_components/doctors_card.dart';
 import 'package:flutter_app_test_resileyes/common_components/loading_widget.dart';
 import 'package:flutter_app_test_resileyes/model/doctor.dart';
-import 'package:flutter_app_test_resileyes/repositories/doctor_repository.dart';
 import 'package:flutter_app_test_resileyes/screens/home/home_viewmodel.dart';
 
 class GridDoctors extends StatefulWidget {
@@ -17,7 +16,7 @@ class GridDoctors extends StatefulWidget {
 class _GridDoctorsState extends State<GridDoctors> {
   @override
   Widget build(BuildContext context) {
-    DoctorRepository doctorsData = DoctorRepository();
+
     return FutureBuilder(
       future: widget.homeViewModel.retrieveAndSendListDoctors(),
       builder: (context, AsyncSnapshot<List<Doctor>> snapshot) {

@@ -23,7 +23,7 @@ class SymptomWidget extends StatelessWidget {
       child: Row(
         children: [
           Text(symptom.emoji),
-          Text(symptom.symptom),
+          Text(symptom.symptom, style: Theme.of(context).textTheme.bodyText1, ),
         ],
       ),
     );

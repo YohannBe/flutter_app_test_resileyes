@@ -18,7 +18,7 @@ class MainCardsListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: listMainCard.length,
         itemBuilder: (context, index) {
-          return MainCard(mainCardModel: listMainCard[index]);
+          return MainCard(mainCardModel: listMainCard[index], index: index);
         },
       ),
     );
